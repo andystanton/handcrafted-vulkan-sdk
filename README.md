@@ -1,6 +1,6 @@
 # Handcrafted Vulkan SDK
 
-A script that assembles something that looks like v1.1.126 of the [LunarG Vulkan SDK](http://lunarg.com/vulkan-sdk/) for macOS by checking out and building the individual components.
+A script that assembles something that looks like v1.1.130 of the [LunarG Vulkan SDK](http://lunarg.com/vulkan-sdk/) for macOS by checking out and building the individual components.
 
 ## Background
 
@@ -45,7 +45,7 @@ cd handcrafted-vulkan-sdk
 ./build-sdk.sh
 ```
 
-This will create a directory called `vulkansdk-macos-1.1.126.handcrafted` containing the SDK. On a 2015 Macbook Pro with 4 cores and 16GB RAM this takes about 1 hour. A rebuild takes about a minute.
+This will create a directory called `vulkansdk-macos-1.1.130.handcrafted` containing the SDK. On a 2015 Macbook Pro with 4 cores and 16GB RAM this takes about 1 hour. A rebuild takes about a minute.
 
 ## Installation
 
@@ -53,7 +53,7 @@ I have intentionally not provided a way to install to system paths like `/usr/lo
 
 Instead you can move the built SDK to a known path and set environment variables as described in the [LunarG Vulkan SDK docs](https://vulkan.lunarg.com/doc/sdk/latest/mac/getting_started.html).
 
-For example I move it to `$HOME/.vulkan/vulkansdk-macos-1.1.126.handcrafted` and create a symlink `$HOME/.vulkan/current` that points to it. My environment variables are then:
+For example I move it to `$HOME/.vulkan/vulkansdk-macos-1.1.130.handcrafted` and create a symlink `$HOME/.vulkan/current` that points to it. My environment variables are then:
 
 ```sh
 export VULKAN_SDK="$HOME/.vulkan/current/macOS"
