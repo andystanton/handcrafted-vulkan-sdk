@@ -11,7 +11,7 @@ script_name=$(basename ${0})
 script_path=$(pwd -P)
 popd >/dev/null
 
-sdk_version=1.1.126
+sdk_version=1.1.130
 
 source_path=${script_path}/source
 build_path=${script_path}/build
@@ -19,17 +19,17 @@ base_output_path=${script_path}/vulkansdk-macos-${sdk_version}.handcrafted
 output_path=${base_output_path}/macOS
 
 repos=(
-    KhronosGroup:SPIRV-Headers:38cafab379e5d16137cb97a485b9385191039b92
-    KhronosGroup:SPIRV-Tools:9b3cc3e05337358d0bd9fec1b7a51e3cbf55312b
-    KhronosGroup:SPIRV-Cross:2019-11-01
-    KhronosGroup:glslang:4b5159ea8170fa34e29f13448fddebf88e0a722a
+    KhronosGroup:SPIRV-Headers:1.5.1
+    KhronosGroup:SPIRV-Tools:v2019.5
+    KhronosGroup:SPIRV-Cross:2019-12-15
+    KhronosGroup:glslang:ebf634bcaa3e46ca8a912ed05b87281c731b2391
     google:shaderc:known-good
     KhronosGroup:Vulkan-Headers:v${sdk_version}
     KhronosGroup:Vulkan-Loader:v${sdk_version}
     KhronosGroup:Vulkan-ValidationLayers:v${sdk_version}
-    KhronosGroup:MoltenVK:v1.0.38
+    KhronosGroup:MoltenVK:v1.0.39
     KhronosGroup:Vulkan-Tools:v${sdk_version}
-    LunarG:VulkanTools:sdk-${sdk_version}
+    LunarG:VulkanTools:4d86fab095aa026b0e49bf8f4b9ce3146a9269c8
 )
 
 # =============================================================================
