@@ -1,14 +1,14 @@
 # Handcrafted Vulkan SDK
 
-A script that assembles something that looks like v1.1.130 of the [LunarG Vulkan SDK](http://lunarg.com/vulkan-sdk/) for macOS by checking out and building the individual components.
+A script that assembles something that looks like v1.2.131 of the [LunarG Vulkan SDK](http://lunarg.com/vulkan-sdk/) for macOS by checking out and building the individual components.
 
 ## Background
 
-As part of macOS Catalina, Apple require binaries to be notarized. This meant that the executables and libraries included in the LunarG Vulkan SDK up to at least v1.1.126 [are not directly usable](https://vulkan.lunarg.com/issue/view/5d9b73d786da81451cc37e7b) in macOS Catalina.
+As part of macOS Catalina, Apple require binaries to be notarized. This meant that the executables and libraries included in the LunarG Vulkan SDK up to at least v1.1.130 [are not directly usable](https://vulkan.lunarg.com/issue/view/5d9b73d786da81451cc37e7b) in macOS Catalina.
 
 There is a workaround: it's possible to right click on a non-notarized excutable or library and ⌥-click on Open. This presents you with a dialog that asks if you want to allow this file to be opened. You have to repeat this a few times for each of the libraries and executables you might want to use. For me this was the glslc executable, and the Vulkan loader, MoltenVK, Khronos validation layer and LunarG API dump validation layer libraries. Yes, you have to 'open' libraries to use this workaround.
 
-As of v1.1.126, LunarG do not publicly provide the process by which they put together the SDK. This script aims to produce a similar output to the LunarG Vulkan SDK, partly to address the notarization issue, but also to allow custom builds of the SDK.
+As of v1.1.130, LunarG do not publicly provide the process by which they put together the SDK. This script aims to produce a similar output to the LunarG Vulkan SDK, partly to address the notarization issue, but also to allow custom builds of the SDK.
 
 ## What's in it?
 
@@ -45,7 +45,7 @@ cd handcrafted-vulkan-sdk
 ./build-sdk.sh
 ```
 
-This will create a directory called `vulkansdk-macos-1.1.130.handcrafted` containing the SDK. On a 2015 Macbook Pro with 4 cores and 16GB RAM this takes about 1 hour. A rebuild takes about a minute.
+This will create a directory called `vulkansdk-macos-1.2.131.handcrafted` containing the SDK. On a 2015 Macbook Pro with 4 cores and 16GB RAM this takes about 1 hour. A rebuild takes about a minute.
 
 ## Installation
 
@@ -53,7 +53,7 @@ I have intentionally not provided a way to install to system paths like `/usr/lo
 
 Instead you can move the built SDK to a known path and set environment variables as described in the [LunarG Vulkan SDK docs](https://vulkan.lunarg.com/doc/sdk/latest/mac/getting_started.html).
 
-For example I move it to `$HOME/.vulkan/vulkansdk-macos-1.1.130.handcrafted` and create a symlink `$HOME/.vulkan/current` that points to it. My environment variables are then:
+For example I move it to `$HOME/.vulkan/vulkansdk-macos-1.2.131.handcrafted` and create a symlink `$HOME/.vulkan/current` that points to it. My environment variables are then:
 
 ```sh
 export VULKAN_SDK="$HOME/.vulkan/current/macOS"
