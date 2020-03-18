@@ -153,6 +153,7 @@ function fix_library_path() {
 function build_spirv_headers() {
     get_source KhronosGroup SPIRV-Headers
     cmake_build SPIRV-Headers make
+    cp ${output_path}/include/spirv/unified1/spirv.h ${output_path}/include/vulkan/spirv.h
 }
 
 function build_spirv_tools() {
