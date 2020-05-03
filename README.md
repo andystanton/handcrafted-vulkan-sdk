@@ -1,5 +1,7 @@
 # Handcrafted Vulkan SDK
 
+⛔️ The notarization issue has been resolved as of v1.2.135 of the LunarG Vulkan SDK so this repository is archived ⛔️
+
 A script that assembles something that looks like v1.2.131 of the [LunarG Vulkan SDK](http://lunarg.com/vulkan-sdk/) for macOS by checking out and building the individual components.
 
 ## Background
